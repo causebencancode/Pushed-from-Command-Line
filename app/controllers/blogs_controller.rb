@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
   end
-
+  
   # GET /blogs/new
   def new
     @blog = Blog.new
