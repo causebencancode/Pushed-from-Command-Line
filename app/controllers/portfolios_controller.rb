@@ -11,7 +11,7 @@ class PortfoliosController < ApplicationController
     @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
      respond_to do |format|
       if @portfolio_item.save
-        format.html { redirectto portfolios_path, notice: 'Blog was successfully created.' }
+        format.html { redirect_to portfolios_path, notice: 'Blog was successfully created.' }
       else
         format.html { render :new }
       end
@@ -36,6 +36,14 @@ class PortfoliosController < ApplicationController
 
   def show
     @portfolio_item = Portfolio.find(params[:id])
+  end 
+
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_path, notice: 'Blog was successfully destroyed.' }
+    end
   end 
 
 end

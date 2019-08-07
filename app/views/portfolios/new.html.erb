@@ -1,6 +1,6 @@
 <h1>Create a new Portfolio item</h1>
 
-<%= form_for(@portfolio_items) do |form| %>
+<%= form_for(@portfolio_item) do |form| %>
 
   <div class="field">
     <%= form.label :title %>
@@ -20,4 +20,6 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+ <p> <%= link_to "Back", portfolios_path %> </p>
 <% end %>
+
