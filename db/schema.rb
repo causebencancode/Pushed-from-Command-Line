@@ -76,3 +76,5 @@ ActiveRecord::Schema.define(version: 2019_08_18_031408) do
   add_foreign_key "blogs", "topics"
   add_foreign_key "technologies", "portfolios"
 end
+
+
