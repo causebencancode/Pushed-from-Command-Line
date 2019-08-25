@@ -49,6 +49,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'friendly_id', git: 'https://github.com/norman/friendly_id'
+  gem 'devise', '~> 4.7'
 end
 
 
