@@ -6,13 +6,14 @@ class PortfoliosController < ApplicationController
   def angular
     @angular_portfolio_items = Portfolio.friendly.angular
   end
-
+  
   def new
     @portfolio_item = Portfolio.friendly.new
+    3.times do @portfolio_item.technologies.build end 
   end
 
   def create
-    @portfolio_item = Portfolio.friendly.new(params.require(:portfolio).permit(:title, :subtitle, :body))
+    @portfolio_item = Portfolio.friendly.new(params.require(:portfolio).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
      respond_to do |format|
       if @portfolio_item.save
         format.html { redirect_to portfolios_path, notice: 'Blog was successfully created.' }
