@@ -9,9 +9,7 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-
 ActiveRecord::Schema.define(version: 2019_08_25_033340) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -89,3 +87,5 @@ ActiveRecord::Schema.define(version: 2019_08_25_033340) do
   add_foreign_key "blogs", "topics"
   add_foreign_key "technologies", "portfolios"
 end
+
+
