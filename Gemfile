@@ -51,9 +51,12 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'friendly_id', git: 'https://github.com/norman/friendly_id'
   gem "devise", ">= 4.7.1"
+  gem 'copyright_view_tool'
 end
 
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
-
+gem 'peotry_view_tool'
+gem "loofah", ">= 2.3.1"
+gem 'petergate', '~> 2.0', '>= 2.0.1'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
