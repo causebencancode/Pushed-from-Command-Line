@@ -1,5 +1,7 @@
 <h1>Portfolio Items</h1>
 
+<%= "#{@copyright}:)".html_safe %>
+
 <%= link_to "Create new item", new_portfolio_path %>
 
 <%= render partial: 'portfolio_item', collection: @portfolio_items %>
